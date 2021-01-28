@@ -35,7 +35,7 @@ void loop() {
     while (Serial.available()) {
         int r = Serial.read();
         if ('0' <= r && r <= '9') {
-            torque = (r - '5') * 64;
+            torque = (r - '1') * 64;
             Serial.print("Set torque : ");
             Serial.println(torque);
         } else if (r == ' ')
